@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Assignment 30</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./tvpng.png" id="product-img" class="product-img">
+        <p>
+        <h4 class="text-center">V-Moda Crossfade Wireless Over-Ear Headphone</h4>
+        </p>
+
+        <div class="quantity-container">
+            <img src="./decrement.png" alt="" class="quan-icon" onclick="dec()">
+            <span id="quantity">1</span>
+            <img src="./increment.png" alt="" class="quan-icon" onclick="inc()">
+        </div>
+    </div>
+
+    <script>
+        const quantityElement = document.getElementById('quantity');
+
+        function inc() {
+            let quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = ++quantity;
+        }
+
+        function dec() {
+            let quantity = parseInt(quantityElement.innerText);
+            if(quantity > 1){
+                quantityElement.innerText = --quantity;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
